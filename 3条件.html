@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--v-if-->
+    <button v-if="t1<100">{{message1}}</button>
+
+    <!--v-else-if-->
+    <button v-else-if="t1>100">{{message2}}</button>
+
+    <!--v-else-->
+    <button v-else>{{message3}}</button>
+
+    <!--v-show-->
+    <button v-show=t2>{{message4}}</button>
+    <button v-show=!t2>{{message5}}</button>
+</div>
+<!--v-on事件监听-->
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            message1:"点1",
+            message2:"点2",
+            message3:"点3",
+            message4:"点4",
+            message5:"点5",
+            t1:9,
+            t2:true
+        }
+
+    })
+</script>
+</body>
+</html>

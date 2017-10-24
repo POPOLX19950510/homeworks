@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--v-pre-->
+    <p v-pre>{{message1}}</p>
+
+    <!--v-once-->
+    <p v-once>{{message2}}</p>
+
+    <!--v-cloak-->
+    <p v-cloak>{{message3}}</p>
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            message1:"hello world ",
+            message2:"hello vue ",
+            message3:"hello vue.js"
+
+        },
+        methods:{
+
+        }
+    })
+</script>
+</body>
+</html>
